@@ -3,7 +3,7 @@
 ## 备份配置信息 ##
 
 # 备份名称，用于标记
-BACKUP_NAME="oss-backup"
+BACKUP_NAME="oss"
 # 备份目录，多个请空格分隔
 BACKUP_SRC="/home/www/"
 # Mysql 主机地址
@@ -51,13 +51,13 @@ echo "dump ok"
 
 # 打包
 echo "start tar"
-BACKUP_FILENAME = "$BACKUP_NAME-backup-$NOW.zip"
+BACKUP_FILENAME="$BACKUP_NAME-backup-$NOW.zip"
 zip -q -r -P $BACKUP_FILE_PASSWORD $BACKUP_DIR/$BACKUP_FILENAME $BACKUP_DIR/*.sql $BACKUP_SRC
 echo "tar ok"
 
 # 上传
 echo "start upload"
-python $(dirname $0)/upload.py -a $OSS_ACCESS_KEY -s $OSS_SECRET_KEY -b $OSS_BUCKET -e OSS_ENDPOINT -f $BACKUP_DIR/$BACKUP_FILENAME
+python $(dirname $0)/upload.py -a $OSS_ACCESS_KEY -s $OSS_SECRET_KEY -b $OSS_BUCKET -e $OSS_ENDPOINT -f $BACKUP_DIR/$BACKUP_FILENAME
 echo "upload ok"
 
 # 清理备份文件
