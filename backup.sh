@@ -37,7 +37,7 @@ OSS_ENDPOINT="<YOUR_endpoint>"
 
 
 ## Start ##
-NOW=$(date +"%Y%m%d%H%M%S")  # 精确到秒，统一秒内上传的文件会被覆盖
+NOW=$(date +"%Y%m%d%H%M%S")  # 精确到秒，同一秒内上传的文件会被覆盖
 
 mkdir -p $BACKUP_DIR
 
