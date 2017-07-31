@@ -41,4 +41,5 @@ $ crontab -e
 
 ## 感谢
 
-感谢[备份vps到七牛云存储脚本](https://github.com/ccbikai/backuptoqiniu)的代码。
+- [备份vps到七牛云存储脚本](https://github.com/ccbikai/backuptoqiniu)
+- [阿里云 OSS 官方 SDK](https://github.com/aliyun/aliyun-oss-python-sdk)
