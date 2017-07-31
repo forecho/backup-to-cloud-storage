@@ -4,9 +4,19 @@
 
 ## 如何使用
 
+确保已经安装了 zip，如果没安装可以执行：
+
+```
+$ sudo apt-get install zip -y
+```
+
 1. 下载代码
 2. 修改 `backup.sh` 文件配置
-3. 给 `./backup.sh` 添加执行权限, `chmod +x backup.sh`
+3. 给 `./backup.sh` 添加执行权限，执行
+
+```
+$ sudo chmod +x backup.sh
+```
 
 ## 添加定时任务
 
