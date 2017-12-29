@@ -17,24 +17,29 @@ $ sudo apt-get install zip -y
 
 安装阿里云的 OSS 包
 
-```
+```sh
 $ pip install oss2
 ```
 
 
-
-
 1. 下载代码
+
+```sh
+$ git clone https://github.com/forecho/backupToOSS.git
+```
+
 2. 修改 `backup.sh` 文件配置
+
+
 3. 给 `./backup.sh` 添加执行权限，执行
 
-```
+```sh
 $ sudo chmod +x backup.sh
 ```
 
 ## 添加定时任务
 
-```
+```sh
 $ crontab -e
 ```
 
