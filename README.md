@@ -30,6 +30,9 @@ $ git clone https://github.com/forecho/backupToOSS.git
 
 2. 修改 `backup.sh` 文件配置
 
+```sh
+$ cd backupToOSS && vim backup.sh
+```
 
 3. 给 `./backup.sh` 添加执行权限，执行
 
