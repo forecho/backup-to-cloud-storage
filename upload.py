@@ -9,7 +9,7 @@ bucket = ''
 try:
     opts, args = getopt.getopt(sys.argv[1:], 'a:s:f:e:b:')
 except getopt.GetoptError as err:
-    print str(err)
+    print(str(err))
     exit()
 
 for k, val in opts:
@@ -30,6 +30,6 @@ bucket = oss2.Bucket(oss2.Auth(access_key_id, access_key_secret), endpoint, buck
 if os.path.isfile(localFile):
     bucket.put_object_from_file(os.path.basename(localFile), localFile)
 else:
-    print localFile + ' not exists!'
+    print(localFile + ' not exists!')
 
 exit()
