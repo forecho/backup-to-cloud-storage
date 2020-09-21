@@ -51,7 +51,7 @@ $ crontab -e
 进入 cron 编辑，按 `i` 进入编辑模式，在最后输入以下内容（以下示例为每天凌晨02:00执行备份，请确认脚本路径）
 
 ```
-0 2 * * * /root/backup/backup.sh
+0 2 * * * /root/backupToOSS/backup.sh
 ```
 
 ## 感谢
