@@ -67,7 +67,7 @@ def main():
         )
 
     print('Cleaning...')
-    # subprocess.call(['rm', '-rf', cfg('backup')['dir']])
+    subprocess.call(['rm', '-rf', cfg('backup')['dir']])
 
 if __name__ == '__main__':
     main()
