@@ -1,0 +1,31 @@
+backup:
+    driver: oss
+    name: oss
+    # 备份目录，多个请空格分隔
+    src: /var/www/html
+    dir: /tmp/backup
+    password: backup
+
+mysql:
+    host: localhost
+    user: root
+    password: root
+    databases: backup
+
+oss:
+    access_key_id: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    access_key_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    endpoint: https://oss-cn-shenzhen.aliyuncs.com
+    bucket: backup
+
+cos:
+    secret_id: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    secret_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    region: ap-hongkong
+    bucket: backup
+
+# Backblaze B2
+b2:
+    application_key_id: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    application_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    bucket: backup

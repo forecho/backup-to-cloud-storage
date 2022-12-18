@@ -1,60 +1,66 @@
-# backupToOSS
+# backup to Cloud Storage
 
-备份到阿里云的 OSS
+[![Build Status](https://travis-ci.org/forecho/backup-to-cloud-storage.svg?branch=master)](https://travis-ci.org/forecho/backup-to-cloud-storage)
 
-## 能做什么？
+Backup your database and files to Cloud Storage.
 
-- 备份指定数据库表（多个）
-- 备份指定文件夹（多个）
+## What can it do?
 
-## 如何使用？
+- Backup MySQL database
+- Backup directory (multiple)
 
-> 只支持 Python2.6 及以上版本，推荐使用 Python3
+## How to use
 
-确保已经安装了 zip，如果没安装可以执行：
+### Install dependencies
 
+```shell
+sudo apt-get install zip -y
 ```
-$ sudo apt-get install zip -y
+
+### Install python3
+
+```shell
+sudo apt-get install python3 python3-pip -y
+pip3 install pyyaml
+pip3 install oss2 # aliyun oss (optional)
+pip3 install cos-python-sdk-v5 # tencent cos (optional)
+pip3 install b2sdk # backblaze b2 (optional)
 ```
 
-安装阿里云的 OSS 包
+
+### Clone the project
+
 
 ```sh
-$ pip install oss2
+git clone https://github.com/forecho/backup-to-cloud-storage.git
 ```
 
-
-1. 下载代码
+### Config
 
 ```sh
-$ git clone https://github.com/forecho/backupToOSS.git
+cd backup-to-cloud-storage && cp config.example.yml config.yml
 ```
 
-2. 修改 `backup.sh` 文件配置
+
+### Run
 
 ```sh
-$ cd backupToOSS && vim backup.sh
+python3 backup.py
 ```
 
-3. 给 `./backup.sh` 添加执行权限，执行
-
-```sh
-$ sudo chmod +x backup.sh
-```
-
-## 添加定时任务
+## Cron
 
 ```sh
 $ crontab -e
 ```
 
-进入 cron 编辑，按 `i` 进入编辑模式，在最后输入以下内容（以下示例为每天凌晨02:00执行备份，请确认脚本路径）
+add this line
 
 ```
-0 2 * * * /root/backupToOSS/backup.sh
+0 2 * * * /usr/bin/python3 /root/backup-to-cloud-storage/backup.py
 ```
 
-## 感谢
+## Thanks
 
-- [备份vps到七牛云存储脚本](https://github.com/ccbikai/backuptoqiniu)
+- [备份 vps 到七牛云存储脚本](https://github.com/ccbikai/backuptoqiniu)
 - [阿里云 OSS 官方 SDK](https://github.com/aliyun/aliyun-oss-python-sdk)

@@ -1,5 +1,5 @@
 .idea
 *.pyc
 sftp*
-config.yml
+config.yaml
 .vscode
