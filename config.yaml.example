@@ -2,7 +2,7 @@ backup:
     driver: oss
     name: oss
     # backup multiple directory
-    src: /var/www/html
+    src: /var/www/html /var/www/backup
     dir: /tmp/backup
     password: backup
 
