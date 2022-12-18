@@ -1,7 +1,5 @@
 # backup to Cloud Storage
 
-[![Build Status](https://travis-ci.org/forecho/backup-to-cloud-storage.svg?branch=master)](https://travis-ci.org/forecho/backup-to-cloud-storage)
-
 Backup your database and files to Cloud Storage.
 
 ## What can it do?

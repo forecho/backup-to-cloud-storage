@@ -1,7 +1,7 @@
 backup:
     driver: oss
     name: oss
-    # 备份目录，多个请空格分隔
+    # backup multiple directory
     src: /var/www/html
     dir: /tmp/backup
     password: backup
