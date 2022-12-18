@@ -10,7 +10,7 @@ mysql:
     host: localhost
     user: root
     password: root
-    databases: backup
+    databases: backup,backup2
 
 oss:
     access_key_id: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
