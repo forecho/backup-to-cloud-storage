@@ -1,4 +1,6 @@
-# backup to Cloud Storage
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg)](https://www.digitalocean.com/?refcode=6087ccd0c9bb&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
+
+# Backup to Cloud Storage
 
 Backup your database and files to Cloud Storage.
 
