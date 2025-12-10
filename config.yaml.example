@@ -1,16 +1,52 @@
 backup:
     driver: oss
-    name: oss
+    name: myserver
     # backup multiple directory
     src: /var/www/html /var/www/backup
     dir: /tmp/backup
     password: backup
 
-mysql:
-    host: localhost
-    user: root
-    password: root
-    databases: backup,backup2
+# 数据库配置（所有数据库都是可选的，支持多实例）
+databases:
+    # MySQL 数据库列表
+    mysql:
+        # 本地 MySQL
+        - name: local
+          host: localhost
+          user: root
+          password: root
+          databases: db1,db2
+
+        # Docker MySQL（项目A）
+        - name: project_a
+          container: project_a_mysql
+          user: root
+          password: root
+          databases: app_db
+
+        # Docker MySQL（项目B）
+        - name: project_b
+          container: project_b_mysql
+          user: admin
+          password: admin123
+          databases: main,cache
+
+    # PostgreSQL 数据库列表
+    postgres:
+        # 本地 PostgreSQL
+        - name: local
+          host: localhost
+          port: 5432
+          user: postgres
+          password: postgres
+          databases: mydb
+
+        # Docker PostgreSQL（项目C）
+        - name: project_c
+          container: project_c_postgres
+          user: postgres
+          password: secret
+          databases: app,analytics
 
 oss:
     access_key_id: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
